@@ -1,0 +1,13 @@
+
+#Membuat Seleksi Kelulusan
+print('_________________________')
+print('Program Seleksi kelulusan')
+print('_________________________')
+siswa = input('Masukkan Nama Siswa: ')
+nilai = int(input('Masukkan Nilai Siswa: '))
+if nilai>70:
+  print ('Siswa yang Bernama',siswa,'Dengan Nilai', nilai,'Dinyatakan Lulus')
+elif nilai==70:
+  print ('Siswa yang Bernama',siswa,'Dengan Nilai', nilai,'Berhak Mendapatkan Kelas Tambahan')
+else:
+  print ('Siswa yang Bernama',siswa,'Dengan Nilai', nilai, 'Dinyatakan tidak Lulus')
