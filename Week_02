@@ -1,0 +1,37 @@
+X = [1, 2, 0.5]
+W = [[0.2, 0.3],
+    [0.3, 0.1],
+    [0.3, 0.2]]
+b = [0, 0]
+T = [0, 1]
+
+import numpy as np
+
+Z = np.dot(X, W) + b
+print(Z)
+
+def sigmoid(n):
+     return 1 / (1 + np.exp(-n))
+
+Y = sigmoid(Z)
+print(Y)
+
+E = 1/2 * sum((T-Y)**2)
+print(E)
+
+alpha = 0.5
+for c in range(2): #neuron output
+    for r in range(3): #neuron input
+        #menghitung turunan
+        delta = -1 * (T[c] - Y[c]) * Y[c] * (1 - Y[c]) * X[r]
+        # update bobot
+        W[r][c] = W[r][c] - alpha * delta
+alpha = 0.5
+for c in range(2): 
+    delta = -1 * (T[c] - Y[c]) * Y[c] * (1 - Y[c]) * 1
+    b[c] = b[c] - alpha * delta
+
+Z = np.dot(X, W) + b
+Y = sigmoid(Z)
+E = 1/2 * sum((T-Y)**2)
+print(E)
