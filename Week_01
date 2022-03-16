@@ -1,13 +1,12 @@
-
-#Membuat Seleksi Kelulusan
+print('Assalamualaikum')
+print('Nama Saya Indah Nurawaliah')
 print('_________________________')
-print('Program Seleksi kelulusan')
-print('_________________________')
-siswa = input('Masukkan Nama Siswa: ')
-nilai = int(input('Masukkan Nilai Siswa: '))
+print('Contoh Seleksi kelulusan')
+siswa = input('Nama: ')
+nilai = int(input('Nilai: '))
 if nilai>70:
-  print ('Siswa yang Bernama',siswa,'Dengan Nilai', nilai,'Dinyatakan Lulus')
+  print (siswa,'Dinyatakan Lulus')
 elif nilai==70:
-  print ('Siswa yang Bernama',siswa,'Dengan Nilai', nilai,'Berhak Mendapatkan Kelas Tambahan')
+  print (siswa,'Akan Mendapatkan Kelas Tambahan Agar Dapat Dinyatakan Lulus')
 else:
-  print ('Siswa yang Bernama',siswa,'Dengan Nilai', nilai, 'Dinyatakan tidak Lulus')
+  print (siswa,'Dinyatakan tidak Lulus')
